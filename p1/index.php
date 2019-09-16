@@ -44,7 +44,7 @@
 
 <body> 	
 	<h1>Jonathan Clough</h1> 
-	<img src='/images/CloughHeadshot.jpg'>
+	<img src='/images/CloughHeadShot.jpg'>
 
 	<p>Jonathan Clough is the Senior Assistant Dean of Finance and Administration for the School of Education and Counseling Psychology. He brings over 20 years of experience in higher education.
 Most recently, Jonathan served as the Senior Associate Director of Athletics at Santa Clara University. He has also worked at Stanford University and Villanova University.
