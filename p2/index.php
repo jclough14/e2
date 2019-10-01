@@ -1,21 +1,40 @@
-<?php require 'index-controller.php'; ?>
+ <!-- Jonathan Clough DGMD E-2, Fall 2019 -->
 
-<!doctype html>
-<html lang='en'>
+ <?php require 'index-controller.php'; ?>
 
-<head>
-	<title>PROJECT 3</title>
-	<meta charset='utf-8'>
-</head>
+ <!doctype html>
+ <html lang='en'>
 
-<body>
+ <head>
+ 	<title>PROJECT 2</title>
+ 	<meta charset='utf-8'>
+ </head>
 
-	<h1>GAME TITLE</h1>
+ <body>
 
-	<h2>Mechanics</h2>
+ 	<h1>Rock, Paper, Scissors</h1>
 
-	<h2>Results</h2>
+ 	<h2>Mechanics</h2>
+ 	<p>Each player chooses a shape (rock, paper or scissors).
+ 		<br>
+ 		They show each other the shape at the same time.
+ 		Rock beats scissors, paper beats rock, and scissors beats paper.
+ 		<br>
+ 		For this match, it is best 3 out of 5 games (excluding ties)</p>
 
-</body>
+ 	<h2>Results</h2>
 
-</html>
+ 	<?php for ($i = 0; $i < $game_number; $i++) { ?>
+ 		<p>
+ 			Player 1 throws a <?php echo $player_1_roll_result[$i]; ?> <br>
+ 			Player 2 throws a <?php echo $player_2_roll_result[$i]; ?> <br>
+ 		</p>
+ 		<h3>Game # <?php echo $i + 1; ?> Result - <?php echo $game_result[$i]; ?></h3>
+
+ 	<?php } ?>
+
+ 	<h2>It took <?php echo $game_number; ?> games, but <?php echo $victor; ?> finally beat <?php echo $loser; ?>!</h2>
+
+ </body>
+
+ </html>
