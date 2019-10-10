@@ -1,39 +1,51 @@
- <!-- Jonathan Clough DGMD E-2, Fall 2019 -->
-
  <?php require 'index-controller.php'; ?>
-
- <!doctype html>
- <html lang='en'>
+ <!DOCTYPE html>
+ <html lang="en">
 
  <head>
- 	<title>PROJECT 2</title>
- 	<meta charset='utf-8'>
+ 	<meta charset="UTF-8">
+
+ 	<title>Document</title>
  </head>
 
  <body>
-
  	<h1>Rock, Paper, Scissors</h1>
 
  	<h2>Mechanics</h2>
- 	<p>Each player chooses a shape (rock, paper or scissors).
+ 	<p>You choose a shape (rock, paper or scissors).
  		<br>
- 		They show each other the shape at the same time.
+ 		The computer selects a shape.<br>
+ 		The players reveal each other the shape at the same time.
  		Rock beats scissors, paper beats rock, and scissors beats paper.
  		<br>
- 		For this match, it is best 3 out of 5 games (excluding ties)</p>
 
- 	<h2>Results</h2>
+ 		<h2>Choose your Shape!</h2>
 
- 	<?php for ($i = 0; $i < $game_number; $i++) { ?>
- 		<p>
- 			Player 1 throws a <?php echo $player_1_roll_result[$i]; ?> <br>
- 			Player 2 throws a <?php echo $player_2_roll_result[$i]; ?> <br>
- 		</p>
- 		<h3>Game # <?php echo $i + 1; ?> Result - <?php echo $game_result[$i]; ?></h3>
+ 		<form method='GET' action='process.php'>
 
- 	<?php } ?>
+ 			<input type="radio" name="shape" value='Rock'> Rock<br>
+ 			<input type="radio" name="shape" value='Paper'> Paper<br>
+ 			<input type="radio" name="shape" value='Scissors'> Scissors<br>
 
- 	<h2>It took <?php echo $game_number; ?> games, but <?php echo $victor; ?> finally beat <?php echo $loser; ?>!</h2>
+ 			<br>
+ 			<button type='submit'>REVEAL!</button>
+
+ 		</form>
+
+ 		<?php if ($showResults) { ?>
+ 			<h2>Results</h2>
+
+ 			You threw a <?php echo $playerShape ?> <br>
+ 			The computer threw a <?php echo $CPUShape ?> <br>
+
+ 			<?php echo $result ?>
+ 			<form action='index.php'><br>
+ 				<input type="submit" value='RETRY!'>
+ 			</form>
+ 		<?php } ?>
+
+
+
 
  </body>
 
