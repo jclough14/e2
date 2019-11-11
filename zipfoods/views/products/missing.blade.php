@@ -1,7 +1,7 @@
 @extends('templates.master')
 
 @section('title')
-{{ $product['name'] }}
+
 @endsection
 
 @section('content')
