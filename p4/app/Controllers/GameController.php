@@ -6,12 +6,8 @@ class GameController extends Controller
     /**
      *
      */
-    public function index()
+    public function game()
     {
-        $welcomes = ['Welcome', 'Aloha!', 'Welkom', 'Bienvenidos', 'Bienvenu', 'Welkomma'];
-        
-        return $this->app->view('index', [
-            'welcome' => $welcomes[array_rand($welcomes)]
-        ]);
+        return $this->app->view('game');
     }
 }

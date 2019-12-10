@@ -2,6 +2,6 @@
 
 return [
     '/' => ['AppController', 'index'],
-    '/results' => ['AppController', 'about'],
-    '/game' => ['GameController', 'index'],
+    '/results' => ['AppController', 'results'],
+    '/game' => ['GameController', 'game'],
 ];

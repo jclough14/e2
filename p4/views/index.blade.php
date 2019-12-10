@@ -15,8 +15,16 @@ Rock Paper Scissors
     Rock beats scissors, scissors beats paper, paper beats rock. <br>
     <a href='https://www.wrpsa.com/the-official-rules-of-rock-paper-scissors/'> Official Rules</a>.
 </p>
-<h2>Choose your shape!</h2>
+<h2>Play the Game!</h2>
+
 <form action='/play' method='POST'>
+
+    <div class='form-group'>
+        <label>Enter your name: <input type='text'></label>
+    </div>
+
+    <h4> Choose your shape!</h4>
+
     <div class='form-group'>
         <label for='rock'><input type='radio' name='choice' value='rock' id='rock'> Rock</label>
 

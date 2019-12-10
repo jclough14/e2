@@ -19,7 +19,7 @@
 <body>
 
     <header>
-        <img id='logo' src='/images/rock-paper-scissors.jpg' alt='Rock Paper Scissors Logo'>
+        <a href='/'><img id='logo' src='/images/rock-paper-scissors.jpg' alt='Rock Paper Scissors Logo'></a>
         <h1>Rock Paper Scissors!</h1>
     </header>
 
