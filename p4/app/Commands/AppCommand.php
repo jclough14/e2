@@ -16,7 +16,7 @@ class AppCommand extends Command
             'player_shape' => 'text',
             'cpu_shape' => 'text',
             'winner' => 'text',
-            'time'=> 'timestamp'
+           // 'time'=> 'timestamp'
             ]);
         dump('Migration complete!');
     }
@@ -35,7 +35,7 @@ class AppCommand extends Command
         'player_shape' => $faker->word,
         'cpu_shape' => $faker->word,
         'winner' => $faker->word,
-        'time'=> $faker->iso8601($max = 'now'),
+      //  'time'=> $faker->iso8601($max = 'now'),
         ];
 
         # Insert the game
