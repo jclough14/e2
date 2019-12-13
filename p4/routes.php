@@ -3,5 +3,7 @@
 return [
     '/' => ['AppController', 'index'],
     '/results' => ['AppController', 'results'],
-    '/game' => ['GameController', 'game'],
+    '/result' => ['AppController', 'result'],
+    '/new-game' => ['AppController', 'newGame'],
+    '/game' => ['AppController', 'Game'],
 ];

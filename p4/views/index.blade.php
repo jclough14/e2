@@ -6,6 +6,16 @@ Rock Paper Scissors
 
 @section('content')
 
+
+
+@if($app->errorsExist())
+<ul class='error alert alert-danger'>
+    @foreach($app->errors() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+</ul>
+@endif
+
 <h2>Take your turn at this classic game!</h2>
 
 <h3>Rules</h3>
@@ -17,20 +27,20 @@ Rock Paper Scissors
 </p>
 <h2>Play the Game!</h2>
 
-<form action='/play' method='POST'>
+<form method='POST' action='/new-game'>
 
     <div class='form-group'>
-        <label>Enter your name: <input type='text'></label>
+        <label>Enter your name: <input type='text' name='name' value='{{ $app->old('name') }}'></label>
     </div>
 
     <h4> Choose your shape!</h4>
 
-    <div class='form-group'>
-        <label for='rock'><input type='radio' name='choice' value='rock' id='rock'> Rock</label>
+   <div class='form-group'>
+        <label for='rock'><input type='radio' name='player_shape' value='rock' id='rock'> Rock</label>
 
-        <label for='paper'><input type='radio' name='choice' value='paper' id='paper'> Paper</label>
+        <label for='paper'><input type='radio' name='player_shape' value='paper' id='paper'> Paper</label>
 
-        <label for='scissors'><input type='radio' name='choice' value='scissors' id='scissors'> Scissors</label>
+        <label for='scissors'><input type='radio' name='player_shape' value='scissors' id='scissors'> Scissors</label>
     </div>
 
     <div class='form-group'>

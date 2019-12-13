@@ -6,14 +6,25 @@ Past Game Results
 
 @section('content')
 
+
+@if($app->old('gameNotFound'))
+<div class='alert alert-warning'>
+Sorry - the game is not available!
+</div>
+@endif
+
+
 <h2>PAST GAME RESUTLS</h2>
 
-@foreach($results as $result)
-<li> {{ $result['name'] }}</li>
-@endforeach
+<ul>
+    @foreach($results as $result)
+    <li> <a href='/result?id={{  $result['id']  }}'>{{ $result['name'] }}</li></a>
+    @endforeach
+</ul>
 
 <div>
-    <a href='/index'>Return to play the game!</a>
+    <a href='/'>Return to play the game!</a>
+ 
 </div>
 
 @endsection

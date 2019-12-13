@@ -6,9 +6,13 @@ Inidivdual Game Result
 
 @section('content')
 
-<h2>Individual GAME RESUTLS</h2>
+<h2>GAME RESULT</h2>
 <div>
-    <a href='/index'>Return to play the game!</a>
+    <a href='/'>Return to play the game!</a>
 </div>
+
+@if($name)
+        Your game {{  $name }}was added
+    @endif
 
 @endsection
