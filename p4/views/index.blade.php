@@ -6,8 +6,6 @@ Rock Paper Scissors
 
 @section('content')
 
-
-
 @if($app->errorsExist())
 <ul class='error alert alert-danger'>
     @foreach($app->errors() as $error)
@@ -36,11 +34,11 @@ Rock Paper Scissors
     <h4> Choose your shape!</h4>
 
    <div class='form-group'>
-        <label for='rock'><input type='radio' name='player_shape' value='rock' id='rock'> Rock</label>
+        <label for='Rock'><input type='radio' name='player_shape' value='Rock' id='Rock'> Rock</label>
 
-        <label for='paper'><input type='radio' name='player_shape' value='paper' id='paper'> Paper</label>
+        <label for='Paper'><input type='radio' name='player_shape' value='Paper' id='Paper'> Paper</label>
 
-        <label for='scissors'><input type='radio' name='player_shape' value='scissors' id='scissors'> Scissors</label>
+        <label for='Scissors'><input type='radio' name='player_shape' value='Scissors' id='Scissors'> Scissors</label>
     </div>
 
     <div class='form-group'>

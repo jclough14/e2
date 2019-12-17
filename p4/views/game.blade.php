@@ -1,3 +1,5 @@
+
+
 @extends('templates.master')
 
 @section('title')
@@ -7,12 +9,27 @@ Inidivdual Game Result
 @section('content')
 
 <h2>GAME RESULT</h2>
-<div>
-    <a href='/'>Return to play the game!</a>
-</div>
 
-@if($name)
-        Your game {{  $name }}was added
-    @endif
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Player Name</th>
+      <th scope="col">Player Shape</th>
+      <th scope="col">Computer Shape</th>
+      <th scope="col">Winner</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr>
+        <td scope="row">{{  $name  }}</td>
+        <td>{{ $player_shape  }}</td>
+        <td>{{  $cpu_shape  }}</td>
+        <td>{{  $winner  }}</td>
+    </tbody>
+</table>
+
+<div>
+    <a href='/'>Return to play again!</a>
+</div>
 
 @endsection
